@@ -2,7 +2,7 @@
 ## on ch2
 
 ## general
-- this code is written based off this doc:
+- this code is written based off this doc for the app router course:
 https://nextjs.org/learn/dashboard-app
 
 
@@ -27,6 +27,13 @@ npx create-next-app@latest nextjs-dashboard --use-npm --example "https://github.
 
 # Definitions
 
+## CSS Modules
+Provide a way to make CSS classes locally scoped to components by default, reducing the risk of styling conflicts.
+CSS Modules allow you to scope CSS to a component by automatically creating unique class names, so you don't have to worry about style collisions as well.
+
+## Tailwind
+Tailwind is a CSS framework that speeds up the development process by allowing you to quickly write utility classes directly in your TSX markup.
+
 ## Next.js
 - a framework for building server-rendered React applications, but it does have some backend capabilities
 - a backend framework that serves a front end. SSR (server side rendering) provides improved perfromance and SEO.
@@ -39,6 +46,24 @@ npx create-next-app@latest nextjs-dashboard --use-npm --example "https://github.
 - a Command Line Interface (CLI) tool that sets up a Next.js application for you.
 
 # Questions
+
+## how does next.js optimize images?
+Preventing layout shift automatically when images are loading.
+Resizing images to avoid shipping large images to devices with a smaller viewport.
+Lazy loading images by default (images load as they enter the viewport).
+Serving images in modern formats, like WebP and AVIF, when the browser supports it.
+
+you don't have to worry about:
+    Ensure your image is responsive on different screen sizes.
+    Specify image sizes for different devices.
+    Prevent layout shift as the images load.
+    Lazy load images that are outside the user's viewport.
+
+## why optimize fonts
+CSS Modules allow you to scope CSS to a component by automatically creating unique class names, so you don't have to worry about style collisions as well.
+
+## how does nextjs optimize fonts
+Next.js automatically optimizes fonts in the application when you use the next/font module. It downloads font files at build time and hosts them with your other static assets. This means when a user visits your application, there are no additional network requests for fonts which would impact performance.
 
 ## what is next JS, defined simply?
 https://www.youtube.com/watch?v=BILxV_vrZO0
