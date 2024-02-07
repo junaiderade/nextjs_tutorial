@@ -47,6 +47,21 @@ Tailwind is a CSS framework that speeds up the development process by allowing y
 
 # Questions
 
+## how does automatic code splitting work?
+To improve the navigation experience, Next.js automatically code splits your application by route segments. This is different from a traditional React SPA, where the browser loads all your application code on initial load.
+
+Splitting code by routes means that pages become isolated. If a certain page throws an error, the rest of the application will still work.
+
+Futhermore, in production, whenever <Link> components appear in the browser's viewport, Next.js automatically prefetches the code for the linked route in the background. By the time the user clicks the link, the code for the destination page will already be loaded in the background, and this is what makes the page transition near-instant!
+
+## why optimize navigation?
+To link between pages, you'd traditionally use the <a> HTML element. At the moment, the sidebar links use <a> elements, but notice what happens when you navigate between the home, invoices, and customers pages on your browser.
+
+There's a full page refresh on each page navigation!
+
+## how do you use the link component?
+you can use the <Link /> Component to link between pages in your application. <Link> allows you to do client-side navigation with JavaScript.
+
 ## what is partial rerendering
 - only the page components update while the layout won't re-render.
 - used in nextjs nav
