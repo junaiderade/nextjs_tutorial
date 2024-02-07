@@ -16,7 +16,7 @@ Config Files: You'll also notice config files such as next.config.js at the root
 app/lib/placeholder-data.js: contains placehodler data
 
 ## testing
-- run npm i and npm run dev (starts app on port 300)
+- run npm i and npm run dev (starts app on port 3000)
 
 # Errors 
 
@@ -46,6 +46,27 @@ Tailwind is a CSS framework that speeds up the development process by allowing y
 - a Command Line Interface (CLI) tool that sets up a Next.js application for you.
 
 # Questions
+
+## what is partial rerendering
+- only the page components update while the layout won't re-render.
+- used in nextjs nav
+
+## what does a layout.tsx file do?
+any nested pages will be in the child component
+
+## how does nextjs routing work?
+
+it uses folders to create nested routes
+![Alt text](notes_images/image.png)
+You can create separate UIs for each route using layout.tsx and page.tsx files.
+
+page.tsx is a special Next.js file that exports a React component, and it's required for the route to be accessible. In your application, you already have a page file: /app/page.tsx - this is the home page associated with the route /.
+
+To create a nested route, you can nest folders inside each other and add page.tsx files inside them. For example:
+![Alt text](notes_images/image_2.png)
+
+By having a special name for page files, Next.js allows you to colocate UI components, test files, and other related code with your routes. Only the content inside the page file will be publicly accessible. For example, the /ui and /lib folders are colocated inside the /app folder along with your routes.
+
 
 ## how does next.js optimize images?
 Preventing layout shift automatically when images are loading.
