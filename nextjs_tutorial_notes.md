@@ -4,7 +4,17 @@
 ## general
 - this code is written based off this doc for the app router course:
 https://nextjs.org/learn/dashboard-app
-
+- you connect your github repo with vercel here
+    - you also make the root directory on vercel nextjs-dashboard
+- you also created a postgres db using vercel
+- you got the env variables from vercel
+- you also seeded a database with the seed file in scripts with npm run seed
+- you can explore the database more on vercel
+- you can even query on vercel:
+    SELECT invoices.amount, customers.name
+    FROM invoices
+    JOIN customers ON invoices.customer_id = customers.id
+    WHERE invoices.amount = 666;
 
 ## project structure
 /app: Contains all the routes, components, and logic for your application, this is where you'll be mostly working from.
