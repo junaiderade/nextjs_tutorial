@@ -1,4 +1,4 @@
-import { sql } from '@vercel/postgres';
+import { sql } from '@vercel/postgres';// you can call sql inside any server component but all the queries are here for ease
 import {
   CustomerField,
   CustomersTableType,
