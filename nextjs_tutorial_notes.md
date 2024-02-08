@@ -37,6 +37,14 @@ npx create-next-app@latest nextjs-dashboard --use-npm --example "https://github.
 
 # Definitions
 
+## what is dynamic rendering?
+With dynamic rendering, content is rendered on the server for each user **at request time (when the user visits the page)**. There are a couple of benefits of dynamic rendering:
+
+## Static Rendering
+With static rendering, data fetching and rendering happens on the server at **build time (when you deploy)** or during revalidation. The result can then be distributed and cached in a Content Delivery Network (CDN).
+
+![Alt text](notes_images/image_4.png)
+
 ## React Server Components
 
 They allow you to query the database directly from the server without an additional API layer.
@@ -73,6 +81,25 @@ Tailwind is a CSS framework that speeds up the development process by allowing y
 - a Command Line Interface (CLI) tool that sets up a Next.js application for you.
 
 # Questions
+
+## okay but how is the backend and frontend code seperated? is it not a security risk for them to be together?
+
+## does nextJS need special deployment? can you deploy nextJS on not vercel infra?
+
+## what are the benefits of static rendering?
+Real-Time Data - Dynamic rendering allows your application to display real-time or frequently updated data. This is ideal for applications where data changes often.
+User-Specific Content - It's easier to serve personalized content, such as dashboards or user profiles, and update the data based on user interaction.
+Request Time Information - Dynamic rendering allows you to access information that can only be known at request time, such as cookies or the URL search parameters.
+
+## Why might static rendering not be a good fit for a dashboard app?
+Because the application will not reflect the latest data changes
+When your data updates, you want to show the latest changes in your dashboard. Static Rendering is not a good fit for this use case.
+
+## what are the benefits of static rendering
+Faster Websites - Prerendered content can be cached and globally distributed. This ensures that users around the world can access your website's content more quickly and reliably.
+Reduced Server Load - Because the content is cached, your server does not have to dynamically generate content for each user request.
+SEO - Prerendered content is easier for search engine crawlers to index, as the content is already available when the page loads. This can lead to improved search engine rankings.
+Static rendering is useful for UI with no data or data that is shared across users, such as a static blog post or a product page. It might not be a good fit for a dashboard that has personalized data that is regularly updated.
 
 ## what is the disadvantage of parallel data fetching?
 - what if one request is slower than the otehrs?
